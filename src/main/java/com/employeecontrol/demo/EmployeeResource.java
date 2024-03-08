@@ -2,6 +2,7 @@ package com.employeecontrol.demo;
 
 import com.employeecontrol.demo.model.Employee;
 import com.employeecontrol.demo.service.EmployeeService;
+import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -40,6 +41,7 @@ public class EmployeeResource {
     }
 
     @DeleteMapping("/delete/{id}")
+    @Transactional
     public ResponseEntity<?> deleteEmployee(@PathVariable("id") Long id){
         employeeService.deleteEmployee(id);
         return new ResponseEntity<>(HttpStatus.OK);
