@@ -1,4 +1,4 @@
-package com.employeecontrol.demo;
+package com.employeecontrol.demo.controller;
 
 import com.employeecontrol.demo.model.Employee;
 import com.employeecontrol.demo.service.EmployeeService;
